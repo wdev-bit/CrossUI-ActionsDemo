@@ -19,7 +19,42 @@ xui.Class('App.Name20', 'xui.Module',{
         iniComponents : function(){
             // [[Code created by CrossUI RAD Studio
             var host=this, children=[], append=function(child){children.push(child.get(0));};
-
+            
+            append(
+                xui.create("xui.UI.Layout")
+                .setHost(host,"xui_ui_layout11")
+                .setItems([
+                    {
+                        "id" : "before",
+                        "pos" : "before",
+                        "min" : 10,
+                        "size" : 80,
+                        "locked" : false,
+                        "folded" : false,
+                        "hidden" : false,
+                        "cmd" : true
+                    },
+                    {
+                        "id" : "main",
+                        "min" : 10,
+                        "size" : 80
+                    },
+                    {
+                        "id" : "after",
+                        "pos" : "after",
+                        "cmd" : false,
+                        "min" : 10,
+                        "size" : 80,
+                        "locked" : false,
+                        "folded" : false,
+                        "hidden" : false
+                    }
+                ])
+                .setLeft("0em")
+                .setTop("0em")
+                .setType("horizontal")
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
