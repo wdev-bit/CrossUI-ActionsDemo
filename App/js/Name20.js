@@ -30,7 +30,7 @@ xui.Class('App.Name20', 'xui.Module',{
                         "min" : 10,
                         "size" : 80,
                         "locked" : false,
-                        "folded" : false,
+                        "folded" : true,
                         "hidden" : false,
                         "cmd" : true
                     },
@@ -53,6 +53,33 @@ xui.Class('App.Name20', 'xui.Module',{
                 .setLeft("0em")
                 .setTop("0em")
                 .setType("horizontal")
+            );
+            
+            host.xui_ui_layout11.append(
+                xui.create("xui.UI.Tabs")
+                .setHost(host,"xui_ui_tabs6")
+                .setItems([
+                    {
+                        "id" : "a",
+                        "caption" : "status 1"
+                    },
+                    {
+                        "id" : "b",
+                        "caption" : "status 2"
+                    },
+                    {
+                        "id" : "c",
+                        "caption" : "status 3"
+                    },
+                    {
+                        "id" : "d",
+                        "caption" : "status 4"
+                    }
+                ])
+                .setLeft("0em")
+                .setTop("0em")
+                .setValue("a"),
+                "main"
             );
             
             return children;
