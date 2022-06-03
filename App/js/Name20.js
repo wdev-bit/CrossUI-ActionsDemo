@@ -82,6 +82,52 @@ xui.Class('App.Name20', 'xui.Module',{
                 "main"
             );
             
+            host.xui_ui_tabs6.append(
+                xui.create("xui.UI.Panel")
+                .setHost(host,"xui_ui_panel6")
+                .setDock("none")
+                .setLeft("16.761904761904763em")
+                .setTop("13.714285714285714em")
+                .setWidth("18em")
+                .setHeight("18em")
+                .setCaption("Foldable Panel")
+                .setToggleBtn(true)
+                .setCloseBtn(true)
+                .setRefreshBtn(true),
+                "a"
+            );
+            
+            host.xui_ui_tabs6.append(
+                xui.create("xui.UI.Stacks")
+                .setHost(host,"xui_ui_stacks1")
+                .setItems([
+                    {
+                        "id" : "a",
+                        "caption" : "page1",
+                        "imageClass" : "xui-icon-xui"
+                    },
+                    {
+                        "id" : "b",
+                        "caption" : "page2"
+                    },
+                    {
+                        "id" : "c",
+                        "caption" : "page3"
+                    },
+                    {
+                        "id" : "d",
+                        "caption" : "page4",
+                        "closeBtn" : true,
+                        "optBtn" : "xui-uicmd-opt",
+                        "popBtn" : true
+                    }
+                ])
+                .setLeft("0em")
+                .setTop("0em")
+                .setValue("a"),
+                "a"
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
